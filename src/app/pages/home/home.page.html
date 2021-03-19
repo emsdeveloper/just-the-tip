@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img id="topLogo" height="38" src="../../../assets/img/jtt-logo.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div id="container">
+    <ion-item id="billInput">
+      <ion-label position="stacked">Bill Amount</ion-label>
+      <ion-input 
+        [(ngModel)]="billAmount" 
+        class="form-control"
+        type="number"
+        required 
+        maxlength="12">
+      </ion-input>
+    </ion-item>
+
+    <ion-button size="default" (click)="calculateTip()">
+      Calculate Tip
+    </ion-button>
+
+    <ion-card id="messageList" *ngIf="calculationComplete">    
+      <ion-card-content>
+        <div id="lessThanFifteenContainer">
+          <ion-item>
+            <ion-label color="danger">less than 15%</ion-label>
+            <ion-button fill="outline" slot="end" (click)="viewTipDetails('under15')">Details</ion-button>
+          </ion-item>
+        </div>
+        <div id="fifteenContainer">
+          <ion-item>
+            <ion-label>15% -  
+              <div class="card-item">
+                ${{ fifteenPercent }}
+              </div>
+            </ion-label>
+            <ion-button fill="outline" slot="end" (click)="viewTipDetails('15')">Details</ion-button>
+          </ion-item>
+        </div>
+        <div id="twentyTwoContainer">
+          <ion-item>
+            <ion-label>22% -  
+              <div class="card-item">
+                ${{ twentyTwoPercent }}
+              </div>
+            </ion-label>
+            <ion-button fill="outline" slot="end" (click)="viewTipDetails('22')">Details</ion-button>
+          </ion-item>
+        </div>
+        <div id="thirtyContainer">
+          <ion-item lines="none">
+            <ion-label>30% - 
+              <div class="card-item">
+                ${{ thirtyPercent }}
+              </div>
+            </ion-label>
+            <ion-button fill="outline" slot="end" (click)="viewTipDetails('30')">Details</ion-button>
+          </ion-item>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

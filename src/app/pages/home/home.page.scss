@@ -1,0 +1,73 @@
+#topLogo {
+  margin-top: 10px;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#billInput {
+  max-width: 90%;
+  margin: 15px auto;
+}
+
+#messageList {
+  max-width: 90%;
+  margin: 30px auto;
+}
+
+#lessThanFifteenContainer {
+  margin: 10px;
+  border-left: 20px solid #f04141;
+}
+
+#fifteenContainer {
+  margin: 10px;
+  border-left: 20px solid #ffce00;
+}
+
+#twentyTwoContainer {
+  margin: 10px;
+  border-left: 20px solid #10dc60;
+}
+
+#thirtyContainer {
+  margin: 10px;
+  border-left: 20px solid #10dc60;
+}
+
+.card-item {
+  margin-left: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+ion-input {
+  margin-top: 8px;
+}
+
+ion-input[type=number]:before {
+  content: "$";
+}
+
